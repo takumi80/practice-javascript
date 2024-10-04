@@ -7,14 +7,16 @@ function errorInput(){
       alert("適切な値ではありません");
       return
    }
-   console.log("Month:",month,"Day:",day)
+   console.log("Month:",month,"Day:",day);
 }
-//document.getElementById("mouth")はタグを確認するだけ
-//valueはそのタグの値を示す
 
-
-/*
-javaScriptのプログラムとHTMLファイルはどこで対応しているか
-タグについているIDで紐ずく
-タグの中にある付加情報のことを属性という
-*/
+const monthSelect = document.getElementById("month2");
+monthSelect();
+function monthSelectlist(){
+   for (let i=1;i<=12;i++){
+      let option = document.createElement('option');
+      option.value = i;
+      option.textContent = i + "月";
+      monthSelect.appendChild(option);+
+   }
+}
